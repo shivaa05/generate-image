@@ -39,7 +39,7 @@ export const createPost = async (req, res) => {
 export const showAllPost = async (req, res) => {
   try {
     const posts = await Post.find({});
-    console.log(posts)
+    // console.log(posts)
     return res.status(200).json({
       success: true,
       posts

@@ -14,17 +14,13 @@ const CreatePost = () => {
   const [preLoading,setPreLoading] = useState(true)
   const submitHandler = async(e) => {
     e.preventDefault()
-    console.log(author)
-    console.log(prompt)
     setPreLoading(false)
     setIsLoading(true)
     const res = await axiosClient.post('/api/generate-image',{
       author,
       prompt
     })
-    console.log(res.data.data.imageUrl)
     setImageUrl(res.data.data.imageUrl)
-    console.log(imageUrl)
     setIsLoading(false)
   }
 

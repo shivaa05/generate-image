@@ -20,8 +20,8 @@ export const generateImage = async (prompt) => {
     // Generate URL
     const imageUrl = `data:image/png;base64,${base64}`;
   
-    console.log("Generated Image URL:");
-    console.log(imageUrl);
+    // console.log("Generated Image URL:");
+    // console.log(imageUrl);
     
   
     return imageUrl
