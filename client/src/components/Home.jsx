@@ -20,7 +20,7 @@ const Home = () => {
     async function fetchData() {
       try {
         const res = await axiosClient.get("/api/posts"); // or axios.get(...)
-        setPosts(res.data.posts);
+        setPosts(res.data.posts.reverse());
         setallPosts(posts);
       } catch (err) {
         console.error(err);
