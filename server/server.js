@@ -6,9 +6,12 @@ import connectDB from "./utils/connectDB.js";
 const app = express();
 app.use(
   cors({
-    origin: "*",
+    origin: ["http://localhost:5173", "https://generate-image-ui.onrender.com"],
+    credentials: true,
   })
-);app.use(express.json());
+);
+
+app.use(express.json());
 connectDB();
 
 app.use("/api", imageRoutes);
